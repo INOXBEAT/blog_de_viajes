@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - Blog de Viajes</title>
+    <!-- Enlace a Google Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Enlace a un archivo CSS personalizado (si quieres agregar tus propios estilos) -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Enlace a Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>
+</head>
+<body>
+    <!-- encabezado de navegación -->
+    <nav class="blue darken-2">
+        <div class="nav-wrapper container">
+          <a href="index.html" class="brand-logo">Blog de Viajes</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinations.html">Destinos</a></li>
+            <li><a href="categories.html">Categorías</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- contenido principal -->
+    <div class="container">
+        <h3 class="center-align">Destinos Destacados</h3>
+                <div class="row">
+                  <!-- Tarjeta 1 -->
+                  <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="img/destino1.jpg" alt="Destino 1" />
+                        <span class="card-title">París, Francia</span>
+                      </div>
+                      <div class="card-content">
+                        <p>
+                          La ciudad del amor, famosa por su Torre Eiffel y su rica cultura
+                          gastronómica.
+                        </p>
+                      </div>
+                      <div class="card-action">
+                        <a href="#">Leer más</a>
+                      </div>
+                      <!-- Sección de Comentarios -->
+                      <div class="card-comments">
+                        <h5>Comentarios</h5>
+                        <!-- Lista de Comentarios -->
+                        <ul class="collection">
+                          <li class="collection-item">
+                            Gran destino, ¡me encantaría visitarlo!
+                          </li>
+                          <li class="collection-item">
+                            El clima es perfecto para viajar en verano.
+                          </li>
+                        </ul>
+                        <!-- Formulario para nuevo comentario -->
+                        <form>
+                          <div class="input-field">
+                            <input id="comment" type="text" class="validate" />
+                            <label for="comment">Deja tu comentario</label>
+                          </div>
+                          <button
+                            class="btn waves-effect waves-light"
+                            type="submit"
+                            name="action"
+                          >
+                            Comentar
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Tarjeta 2 -->
+                  <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="img/destino2.jpg" alt="Destino 2" />
+                        <span class="card-title">Machu Picchu, Perú</span>
+                      </div>
+                      <div class="card-content">
+                        <p>
+                          Una de las nuevas maravillas del mundo, ubicada en los Andes
+                          peruanos.
+                        </p>
+                      </div>
+                      <div class="card-action">
+                        <a href="#">Leer más</a>
+                      </div>
+                      <!-- Sección de Comentarios -->
+                      <div class="card-comments">
+                        <h5>Comentarios</h5>
+                        <!-- Lista de Comentarios -->
+                        <ul class="collection">
+                          <li class="collection-item">
+                            La vista desde la cima fue increíble, ¡totalmente vale la
+                            caminata!
+                          </li>
+                          <li class="collection-item">
+                            Probar la comida local fue toda una aventura en sí misma.
+                          </li>
+                        </ul>
+                        <!-- Formulario para nuevo comentario -->
+                        <form>
+                          <div class="input-field">
+                            <input id="comment" type="text" class="validate" />
+                            <label for="comment">Deja tu comentario</label>
+                          </div>
+                          <button
+                            class="btn waves-effect waves-light"
+                            type="submit"
+                            name="action"
+                          >
+                            Comentar
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Tarjeta 3 -->
+                  <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="img/destino3.jpg" alt="Destino 3" />
+                        <span class="card-title">Kyoto, Japón</span>
+                      </div>
+                      <div class="card-content">
+                        <p>
+                          Conocida por la belleza de sus templos antiguos y sus hermosos
+                          paisajes naturales.
+                        </p>
+                      </div>
+                      <div class="card-action">
+                        <a href="#">Leer más</a>
+                      </div>
+                      <!-- Sección de Comentarios -->
+                      <div class="card-comments">
+                        <h5>Comentarios</h5>
+                        <!-- Lista de Comentarios -->
+                        <ul class="collection">
+                          <li class="collection-item">
+                            Cada rincón de la ciudad tiene una historia que contar.
+                          </li>
+                          <li class="collection-item">
+                            Las puestas de sol en la playa son simplemente mágicas.
+                          </li>
+                        </ul>
+                        <!-- Formulario para nuevo comentario -->
+                        <form>
+                          <div class="input-field">
+                            <input id="comment" type="text" class="validate" />
+                            <label for="comment">Deja tu comentario</label>
+                          </div>
+                          <button
+                            class="btn waves-effect waves-light"
+                            type="submit"
+                            name="action"
+                          >
+                            Comentar
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Mapa Interactivo -->
+                <div class="container">
+                  <h2 class="center-align">Mapa de Destinos</h2>
+                  <div id="map"></div>
+                </div>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importar Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Archivo JS personalizado -->
+    <script src="js/scripts.js"></script>
+    
+</body>
+</html>
