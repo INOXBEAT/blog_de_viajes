@@ -120,37 +120,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function initMap() {
-  var mapOptions = {
-    center: { lat: 0, lng: 0 },
-    zoom: 2,
-    mapTypeId: "roadmap",
-  };
-  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+document.addEventListener('DOMContentLoaded', function() {
+    // Crear el mapa
+    var map = L.map('map').setView([0, 0], 2);
 
-  var locations = [
-    { lat: 48.8566, lng: 2.3522, title: "París, Francia" },
-    { lat: -13.1631, lng: -72.545, title: "Machu Picchu, Perú" },
-    { lat: 35.6828, lng: 139.7594, title: "Kyoto, Japón" },
-  ];
+    // Cargar el mapa base de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-  locations.forEach(function (location) {
-    new google.maps.Marker({
-      position: { lat: location.lat, lng: location.lng },
-      map: map,
-      title: location.title,
+    // Crear los puntos de interés
+    var locations = [
+        {lat: 48.8566, lng: 2.3522, title: 'París, Francia'},
+        {lat: -13.1631, lng: -72.5450, title: 'Machu Picchu, Perú'},
+        {lat: 35.6828, lng: 139.7594, title: 'Kyoto, Japón'}
+    ];
+
+    // Agregar los marcadores al mapa
+    locations.forEach(function(location) {
+        L.marker([location.lat, location.lng])
+            .addTo(map)
+            .bindPopup(location.title);
     });
-  });
 
-  // Ajustar el mapa para mostrar todos los marcadores
-  var bounds = new google.maps.LatLngBounds();
-  locations.forEach(function (location) {
-    bounds.extend(new google.maps.LatLng(location.lat, location.lng));
-  });
-  map.fitBounds(bounds);
-}
-
-// Cargar el mapa cuando la página esté completamente cargada
-document.addEventListener("DOMContentLoaded", function () {
-  initMap();
+    // Ajustar el mapa para mostrar todos los marcadores
+    var bounds = L.latLngBounds(locations.map(function(location) {
+        return [location.lat, location.lng];
+    }));
+    map.fitBounds(bounds);
 });
