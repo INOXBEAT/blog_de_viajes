@@ -17,3 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar el mapa
+    var map = L.map('map').setView([51.505, -0.09], 13); // Coordenadas de ejemplo para centrar el mapa
+
+    // Capa de mapa base
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Marcador de ejemplo
+    L.marker([51.5, -0.09]).addTo(map)
+        .bindPopup('Un marcador de ejemplo en Londres.')
+        .openPopup();
+});
+
