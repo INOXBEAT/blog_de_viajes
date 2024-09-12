@@ -14,3 +14,11 @@ h2 {
 .card-content {
     text-align: center;
 }
+
+.btn-small {
+    margin: 1px;
+}
+
+h3 {
+    margin-top: 40px;
+}
