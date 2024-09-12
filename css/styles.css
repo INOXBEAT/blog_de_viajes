@@ -1,0 +1,16 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+.card-image img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    text-align: center;
+}
