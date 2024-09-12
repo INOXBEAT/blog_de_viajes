@@ -35,3 +35,7 @@ h3 {
 .input-field input[type="text"] {
     margin-bottom: 10px;
 }
+
+.input-field {
+    margin: 20px 0;
+}
