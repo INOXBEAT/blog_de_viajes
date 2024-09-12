@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    var destinos = [
+    // Cargar destinos desde localStorage
+    var destinos = JSON.parse(localStorage.getItem('destinos')) || [
         {
             lat: 48.8566,
             lng: 2.3522,
@@ -75,12 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    // Cargar comentarios desde localStorage
-    var storedDestinos = localStorage.getItem('destinos');
-    if (storedDestinos) {
-        destinos = JSON.parse(storedDestinos);
-    }
-
+    // Mostrar marcadores y comentarios
     destinos.forEach(function(destino, index) {
         L.marker([destino.lat, destino.lng]).addTo(map)
             .bindPopup('<b>' + destino.title + '</b><br>' + destino.description);
