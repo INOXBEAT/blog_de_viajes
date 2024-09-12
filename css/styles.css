@@ -2,6 +2,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+nav {
+    margin-bottom: 20px;
+}
+
 h2 {
     margin-top: 50px;
 }
@@ -17,6 +21,11 @@ h2 {
 
 .btn-small {
     margin: 1px;
+}
+
+.btn-small.active {
+    background-color: #000 !important;
+    color: #fff !important;
 }
 
 h3 {
@@ -42,4 +51,16 @@ h3 {
 
 #map {
     height: 400px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
