@@ -22,3 +22,16 @@ h2 {
 h3 {
     margin-top: 40px;
 }
+
+.card-comments {
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.collection {
+    margin-bottom: 20px;
+}
+
+.input-field input[type="text"] {
+    margin-bottom: 10px;
+}
